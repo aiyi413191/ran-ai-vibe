@@ -1,0 +1,95 @@
+/* 通用元素基礎樣式 */
+body {
+    font-family: "Noto Sans TC", sans-serif;  /* 字體：可換成您喜歡的中文字型 */
+    background-color: #e1c9a3;               /* 背景：柔和米杏色 */
+    color: #333333;                          /* 預設文字顏色：深灰提高可讀性 */
+    margin: 0;  padding: 0;                  /* 去除預設外距，讓版面更緊湊 */
+  }
+  
+  /* 版面寬度與排版設定 */
+  body > header, body > section, body > footer {
+    max-width: 800px;    /* 限制內容寬度，避免過寬行列難以閱讀 */
+    margin: 0 auto;      /* 置中對齊 */
+    padding: 20px;       /* 內距確保內容不緊貼邊緣 */
+  }
+  
+  /* 頁首區域樣式 */
+  header {
+    background-color: #d9d9d9;    /* 頁首背景：淺灰（莫蘭迪高級灰） */
+    text-align: center;
+  }
+  header h1 {
+    margin: 10px 0;
+    color: #a17453;               /* 主標題文字顏色：深棕色調 */
+  }
+  header nav a {
+    margin: 0 10px;
+    color: #555;
+    text-decoration: none;        /* 去除底線 */
+  }
+  header nav a:hover {
+    text-decoration: underline;   /* 滑鼠經過時加底線提示 */
+  }
+  
+  /* 區塊標題樣式 */
+  section h2 {
+    border-left: 5px solid #a17453;   /* 左側加一道深棕色邊框作裝飾 */
+    padding-left: 10px;
+    color: #a17453;
+  }
+  
+  /* 作品項目區塊樣式 */
+  .project {
+    background-color: #f7f5f0;   /* 柔和淺色背景，區隔於主背景色 */
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;          /* 圓角讓卡片更柔和 */
+  }
+  .project h3 {
+    margin-top: 0;
+  }
+  
+  /* 聯絡表單樣式 */
+  form {
+    margin-top: 10px;
+    background-color: #f7f5f0;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  form label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  form input, form textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 5px;
+    margin-top: 3px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-family: inherit;
+  }
+  form button {
+    margin-top: 5px;
+    padding: 8px 16px;
+    background-color: #a17453;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  form button:hover {
+    background-color: #81593c;
+  }
+  
+  /* 頁尾樣式 */
+  footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #555;
+    border-top: 1px solid #ccc;
+    margin-top: 30px;
+    padding-top: 10px;
+  }
+  
