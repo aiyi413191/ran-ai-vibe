@@ -1,0 +1,18 @@
+/* 音符的動畫效果，讓音符從下往上移動 */
+@keyframes moveUp {
+    0% {
+        -webkit-transform: translateY(100vh);  /* 初始位置是頁面底部 */
+        transform: translateY(100vh);  /* 初始位置是頁面底部 */
+    }
+    100% {
+        -webkit-transform: translateY(-100vh); /* 結束位置是頁面上方 */
+        transform: translateY(-100vh); /* 結束位置是頁面上方 */
+    }
+}
+
+/* 設定音符的樣式 */
+.note {
+    position: absolute;
+    font-size: 30px;
+    animation: moveUp 10s linear forwards;
+}
