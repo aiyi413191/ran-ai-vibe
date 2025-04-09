@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- 頁面標題和導航 -->
     <header>
         <h1>冉璦的作品集網站</h1>
         <nav>
@@ -18,10 +19,12 @@
 
     <!-- 背景音樂部分 -->
     <audio id="background-music" autoplay loop>
-        <source src="background-music.ogg" type="audio/ogg">
-        <source src="background-music.mp3" type="audio/mp3">
+        <source src="audio\background-music.ogg" type="audio/ogg">
+        <source src="audio\background-music.mp3" type="audio/mp3">
         您的瀏覽器不支援 HTML5 音樂標籤。
     </audio>
+  
+    <!-- 音樂播放控制按鈕 -->
     <button onclick="document.getElementById('background-music').muted = false;">播放音樂</button>
 
     <!-- 背景影片區塊 -->
@@ -31,7 +34,7 @@
             您的瀏覽器不支援 HTML5 影片標籤。
         </video>
         <div class="content">
-            <h1>手作幾何手作幾何</h1>
+            <h1>"Handcrafted Geometric Design"</h1>
             <p>Adobe InDesign</p>
         </div>
     </section>
@@ -39,14 +42,21 @@
     <!-- 作品介紹區塊 -->
     <section id="portfolio">
         <h1>這件背景動畫中寵物作品運用了色彩與幾何圖形的設計方式，是在Adobe InDesign中創作的，以將圓圓的陪伴融入視覺藝術中。</h1>
+        
         <div class="content">
-            <p>🐾 <strong>《圓圓陪我走過的15年》🐾</strong>...</p>
+            <p>🐾 <strong>《圓圓陪我走過的15年》🐾</strong> 這不僅是背景作品，更是我和圓圓之間深厚默契的視覺寫照。<strong>《圓圓陪我走過的15年》</strong> 是我為了紀念與圓圓共同度過的15年時光所創作的作品。圓圓從我手心裡的小圓點 🐶👉🖐️，一直到如今成為我生活中熟悉的重量 💛，無論她是靜得像空氣 🍃，還是貼近我像影子 🫶，她總在我身邊，默默陪伴，無需多言。</p>
+            
+            <p>這張作品運用了色彩與幾何圖形的設計方式，呈現出圓圓溫暖且不張揚的個性。在Adobe InDesign中，我將圓圓的形象用細膩的圖形與線條來表達，創造出一幅充滿視覺沖擊力與情感層次的作品 🎨。每一筆與每一色，都凝聚了我們一同經歷的那些靜謐的日子和有過的情緒風暴 🌧️。</p>
+
+            <p>我們常一起躺在窗邊，看雲朵飄過 ☁️；一起聽著家裡的風聲 🌬️，安靜地分享著每一個瞬間。圓圓是那種不太吵、不太鬧的狗 🐾，卻在我每次需要靜下來的時候，悄悄靠近我 🤍，總能帶給我無言的安心。</p>
+
+            <p>在這段時間裡，我經歷過低潮 ⬇️、轉變 🔄、甚至自我懷疑 😞，而圓圓從未離開過 🚶‍♀️🚫。她的眼神 👀沒有任何疑問，只有一種平靜的陪伴 🤗，這是我最深的安慰。這幅作品是我們15年共同記憶的紀念，也是我想對圓圓說的一句話：「謝謝妳，一直都在。」 💌</p>
         </div>
     </section>
 
     <!-- 音符飄動效果 -->
     <script>
-        const notes = ["💫", "🌻", "✨", "🍃", "🍀", "🌙", "💎"];
+        const notes = ["🍃", "💎", "🍃", "💎", "🍃", "💎", "🍃"];
         
         setInterval(() => {
           const note = document.createElement("div");
@@ -55,9 +65,34 @@
           note.style.left = Math.random() * window.innerWidth + "px";  // 隨機水平位置
           document.body.appendChild(note);
 
-          note.style.animation = "moveUp 10s linear forwards"; // 呼叫CSS動畫
-          setTimeout(() => note.remove(), 10000); // 動畫結束後移除音符
+          // 設定動畫，讓音符從下到上移動
+          note.style.animation = "moveUp 10s linear forwards";  // 呼叫CSS動畫
+
+          // 動畫結束後移除音符
+          setTimeout(() => note.remove(), 10000);
         }, 800);
     </script>
+
+    <style>
+        /* 音符的動畫效果，讓音符從下往上移動 */
+        @keyframes moveUp {
+            0% {
+                -webkit-transform: translateY(100vh);  /* 初始位置是頁面底部 */
+                transform: translateY(100vh);  /* 初始位置是頁面底部 */
+            }
+            100% {
+                -webkit-transform: translateY(-100vh); /* 結束位置是頁面上方 */
+                transform: translateY(-100vh); /* 結束位置是頁面上方 */
+            }
+        }
+
+        /* 設定音符的樣式 */
+        .note {
+            position: absolute;
+            font-size: 30px;
+            animation: moveUp 10s linear forwards;
+        }
+    </style>
+
 </body>
 </html>
